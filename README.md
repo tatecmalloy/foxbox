@@ -1,22 +1,20 @@
 # FoxBox Framework
 
-An object-oriented, event-driven logic framework designed to streamline complex state management and physics interactions within the Godot Engine environment. 
-
-## Overview
-This library provides a modular architecture for handling entity logic, dynamic attribute modifiers, and complex spatial interactions. It abstracts core gameplay systems into reusable, decoupled components, demonstrating strong principles of Object-Oriented Programming (OOP) and system design.
+An object-oriented, component-based logic framework designed to streamline complex state management, physics interactions, and entity optimization within the Godot Engine.
 
 ## Core Architecture & Modules
 
-* **Finite State Machines (`/state_machine`):** A robust implementation of state machine logic allowing for decoupled, highly scalable entity behavior.
-* **Dynamic Modifiers & Damage Processing (`/modifiers`, `/damage`):** Event-driven architecture for calculating dynamic stat pools and processing interactions without tight coupling.
-* **Interaction & Physics Abstraction (`/interaction`, `/physics_dragging`):** Custom physics controllers handling complex spatial logic, drag-and-drop interactions, and collision management. 
-* **Decoupled View Models (`/view_model`, `/camera_arm`):** Separates core business logic from rendering and camera manipulation, adhering to MVC-style design patterns.
+* **Component-Based Entity Architecture (`/characters/components`, `/core`):** Highly decoupled entity construction utilizing modular components (e.g., input handling, motors, hitboxes, state machines) to avoid rigid inheritance trees.
+* **State Management (`/state_machine`):** Robust finite state machine implementation (`fox_state_machine.gd`, `default_state.gd`) for scalable entity behavior and logic flow.
+* **Dynamic Modifiers & Data Policies (`/modifiers`):** Event-driven data architecture (`fox_modifier_manager.gd`, `fox_modifier_slot_policy.gd`) for calculating dynamic attributes and processing logic policies without tight coupling.
+* **Physics & Spatial Interaction (`/interaction`, `/physics_dragging`, `/socket`):** Custom physics controllers handling complex spatial logic, raycast interactions, drag-and-drop mechanics (`fox_physics_dragger_3d.gd`), and 3D socket attachment management (`fox_socket_manager_3d.gd`).
+* **Performance Optimization (`/optimizers`):** Dedicated modules for visual and network optimization (`fox_network_optimizer.gd`, `fox_visual_optimizer.gd`) to maintain processing performance at scale.
+* **Decoupled View Models (`/view_model`, `/camera_arm`):** Separates core business logic from rendering and presentation (`fox_view_model_container.gd`), strictly adhering to MVC-style design patterns.
 
 ## Engineering Principles Demonstrated
-* **Object-Oriented Programming (OOP)**
-* **Event-Driven Architecture (Signals/Observers)**
-* **Modular Code Design & System Architecture**
-* **Continuous Refactoring & Optimization (`/optimizers`)**
+* Object-Oriented Programming (OOP) & Composition over Inheritance
+* Event-Driven Architecture (Signals/Observers)
+* Modular Code Design & API Abstraction
 
 ## Context
-Actively developed and maintained under my creator alias. Forked here to showcase system architecture and foundational software engineering practices.
+Actively developed and maintained under my creator alias. Forked here to showcase system architecture, data management, and foundational software engineering practices.
